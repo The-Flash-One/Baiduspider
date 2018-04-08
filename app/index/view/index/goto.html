@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据生成成功</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+
+       <div style="">网站（{$web}）抓取数据成功<br/>页面将会1秒钟之后跳转，并将数据导入到数据库中.......</div>
+
+       <form id="form1" name="form1" method="post" action="{:url('readContent',['tonum' => 0])}" style="display: none;"  enctype='application/json'>
+           <input type="text" value="{literal}{$title}{/literal}" name="title" readonly="readonly">
+           <input type="text" value="{literal}{$content}{/literal}" name="content" readonly="readonly">
+           <input type="submit" name="Submit" value="提交" />
+       </form>
+
+       <script>
+           window.setTimeout("form1.submit()",1000);//毫秒
+       </script>
+
+
+
+
+</body>
+</html>
